@@ -5,9 +5,3 @@
   tasks:
   - name: apache install
     apt: name=apache2 update_cache=yes state=latest
-- name: tasks for assign1 on slave2
-  hosts: s2
-  become: true
-  tasks:
-  - name: install nginx
-    apt: name=nginx update_cache=yes state=latest
