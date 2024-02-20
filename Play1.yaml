@@ -1,5 +1,11 @@
 ---
 - name: tasks for assign1 on slave1
+  hosts: s1
+  become: true
+  tasks:
+  - name: apache install
+    apt: name=apache2 update_cache=yes state=latest
+- name: tasks for assign1 on slave1
   hosts: s2
   become: true
   tasks:
